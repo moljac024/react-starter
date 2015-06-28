@@ -1,22 +1,32 @@
 module.exports = {
+  context: __dirname + "/src",
+  entry: {
+    javascript: "./main.js",
+    html: "./index.html",
+  },
+
   module: {
     loaders: [
       {
         test: /\.jsx?$/,
-        loader: ['react-hot', 'jsx', 'babel'],
-        exclude: /node_modules/
-      }
-    ]
+        exclude: /node_modules/,
+        loaders: ["babel-loader"],
+      },
+      {
+        test: /\.html$/,
+        loader: "file?name=[name].[ext]",
+      },
+    ],
   },
-  externals: {
-    //don't bundle the 'react' npm package with our bundle.js
-    //but get it from a global 'React' variable
-    // 'react': 'React'
-  },
-  entry: {
-    helloWorld: './src/main.js'
-  },
+
   output: {
-    filename: 'dist/webpack-bundle.js'
+    path: __dirname + "/dist",
+    filename: "bundle.js",
   },
-};
+
+
+  resolve: {
+    // you can now require('file') instead of require('file.coffee')
+    extensions: ['', '.js', '.jsx', '.json', '.coffee']
+  }
+}
