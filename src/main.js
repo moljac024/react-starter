@@ -6,4 +6,7 @@ React.render(
   document.getElementById('hello')
 );
 
-React.render(<HelloForm />, document.getElementById('hello-form'));
+React.render(
+  <HelloForm />,
+  document.getElementById('hello-form')
+);
