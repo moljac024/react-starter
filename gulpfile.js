@@ -22,8 +22,7 @@ gulp.task('build', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(sources.code, ['build']);
-
-})
+  gulp.watch(sources.code, ['build']);
+});
 
 gulp.task('default', ['build']);
