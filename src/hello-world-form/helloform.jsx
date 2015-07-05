@@ -11,8 +11,8 @@ var HelloForm = React.createClass({
   render: function() {
     return (
       <div className="hello-form">
-      <input type="text" onChange={this.onChange} />
-      <HelloSayer name={this.state.name} />
+        <input type="text" onChange={this.onChange} />
+        <HelloSayer name={this.state.name} />
       </div>
     );
   },
