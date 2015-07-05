@@ -3,7 +3,9 @@ var webpack = require('webpack');
 
 var DEV_SERVER_HOST = '0.0.0.0';
 var DEV_SERVER_PORT = 3000;
-var DEV_SERVER_LISTEN_HOST = 'localhost';
+
+// Usually this is 'localhost' when not working from a VM:
+var DEV_SERVER_LISTEN_HOST = 'xubuntomir';
 
 module.exports = {
 
