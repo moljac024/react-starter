@@ -9,6 +9,5 @@ Both build systems support ES6 and JSX with the use of babel transpiler.
 
 ## How to get started
 
-npm install
-
-gulp build && gulp watch
+    npm install
+    gulp build && gulp watch
